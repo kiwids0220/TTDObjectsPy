@@ -1,0 +1,103 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# IDE
+.idea/
+.vscode/
+.vs/
+*.swp
+*.swo
+*~
+
+# Local Codex state
+.codex/
+.codex-home/
+codex.log
+history.jsonl
+session_index.jsonl
+goals_*.sqlite*
+state_*.sqlite*
+logs_*.sqlite*
+memories_*.sqlite*
+sandbox.log
+installation_id
+cap_sid
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+*.run
+*.ttd
+*.idx
+*.out
+*.pdb
+*.obj
+*.ilk
+*.exp
+asset.backup-*/
+asset/install_result.json

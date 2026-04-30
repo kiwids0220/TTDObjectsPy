@@ -1,0 +1,44 @@
+{
+  "name": "ttdobjectspy",
+  "version": "0.1.0",
+  "description": "TTDObjectsPy plugin bundling a TTD analysis skill and the local TTDObjectsPy MCP server for Microsoft Time Travel Debugging trace work on Windows.",
+  "author": {
+    "name": "TTDObjectsPy Contributors",
+    "url": "https://github.com/kiwids0220/TTDObjectsPy"
+  },
+  "homepage": "https://github.com/kiwids0220/TTDObjectsPy",
+  "repository": "https://github.com/kiwids0220/TTDObjectsPy",
+  "license": "MIT",
+  "keywords": [
+    "ttd",
+    "time-travel-debugging",
+    "reverse-engineering",
+    "malware-analysis",
+    "ctf",
+    "windows",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "TTDObjectsPy",
+    "shortDescription": "Analyze Windows TTD traces with a bundled MCP server",
+    "longDescription": "Bring TTDObjectsPy into Codex with a bundled MCP server and a workflow-heavy skill for capturing traces, orienting a session quickly, tracing values backward and forward, and answering crash, malware, CTF, and general reverse-engineering questions from real TTD recordings.",
+    "developerName": "TTDObjectsPy Contributors",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/kiwids0220/TTDObjectsPy",
+    "privacyPolicyURL": "https://github.com/kiwids0220/TTDObjectsPy",
+    "termsOfServiceURL": "https://github.com/kiwids0220/TTDObjectsPy",
+    "defaultPrompt": [
+      "Open this .run trace, orient the session, and trace the interesting behavior back to its source."
+    ],
+    "brandColor": "#005A9C",
+    "composerIcon": "./assets/ttdobjectspy.svg",
+    "logo": "./assets/ttdobjectspy.svg",
+    "screenshots": []
+  }
+}

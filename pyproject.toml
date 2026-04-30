@@ -1,0 +1,111 @@
+[project]
+name = "TTDObjectsPy"
+version = "0.1.0"
+description = "Model Context Protocol server for Microsoft Time Travel Debugging - AI-assisted reverse engineering and malware analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "TTDObjectsPy Contributors"}
+]
+maintainers = [
+    {name = "TTDObjectsPy Contributors"}
+]
+keywords = [
+    "ttd",
+    "time-travel-debugging",
+    "debugging",
+    "reverse-engineering",
+    "malware-analysis",
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "claude",
+    "windbg",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Debuggers",
+    "Topic :: Security",
+    "Topic :: System :: Monitoring",
+]
+
+# Core dependencies
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.optional-dependencies]
+# Development dependencies
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+    "ruff>=0.1.0",
+    "pre-commit>=3.0.0",
+]
+
+# Binary Ninja integration (optional)
+binja = [
+    "binaryninja>=3.0.0",
+]
+
+# Data flow tracing (requires Capstone disassembler)
+dataflow = [
+    "capstone>=5.0.0",
+]
+
+# All optional dependencies
+all = [
+    "TTDObjectsPy[dev,binja,dataflow]",
+]
+
+[project.urls]
+Homepage = "https://github.com/kiwids0220/TTDObjectsPy"
+Documentation = "https://github.com/kiwids0220/TTDObjectsPy#readme"
+Repository = "https://github.com/kiwids0220/TTDObjectsPy"
+Issues = "https://github.com/kiwids0220/TTDObjectsPy/issues"
+Changelog = "https://github.com/kiwids0220/TTDObjectsPy/releases"
+
+[project.scripts]
+ttd-mcp-server = "ttdobjectspy.server:main"
+ttd-mcp = "ttdobjectspy.server:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

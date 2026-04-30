@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "ttdobjectspy": {
+      "command": "py",
+      "args": [
+        "-3",
+        "scripts/run_codex_mcp.py"
+      ]
+    }
+  }
+}

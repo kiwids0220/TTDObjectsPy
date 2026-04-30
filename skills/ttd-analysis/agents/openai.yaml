@@ -1,0 +1,4 @@
+interface:
+  display_name: "TTD Analysis"
+  short_description: "Capture and analyze Windows TTD traces with TTDObjectsPy"
+  default_prompt: "Open this .run trace, orient the session, and trace the interesting behavior back to its source."
